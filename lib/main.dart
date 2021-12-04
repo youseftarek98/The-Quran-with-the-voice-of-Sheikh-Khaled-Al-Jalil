@@ -1,10 +1,11 @@
 
-import 'package:application/ui/search.dart';
-import 'package:application/ui/three.dart';
-import 'package:application/ui/two.dart';
+import 'package:application/ui/home.dart';
+import 'package:application/ui/quran_screen.dart';
+import 'package:application/ui/azkar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 import 'model_two/quran.dart';
 import 'ui/music_app.dart';
@@ -41,10 +42,10 @@ class Control extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: ButtomNavigator(),
       routes: {
-        "episode6PlaylistView": (context) => Episode6PlaylistView(),
-        "one": (context) => Search(),
-        "three": (context) => Three(),
-        "two": (context) => Two(),
+        "episode6PlaylistView": (context) => MusicScreen(),
+        "one": (context) => HomeScreen(),
+        "three": (context) => QuranScreen(),
+        "two": (context) => AzkarScreen(),
         "quran": (context) => Quran(),
       },
     );

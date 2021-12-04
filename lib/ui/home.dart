@@ -1,9 +1,10 @@
-import 'package:application/t.dart';
+import 'package:application/ui/todo_screen.dart';
 import 'package:flutter/material.dart';
 
 
 
-class Home extends StatelessWidget {
+
+class HomeScreen extends StatelessWidget {
   double screenHeight = 0;
   double screenWidth = 0;
   final Color mainColor = Color(0xff181c27);

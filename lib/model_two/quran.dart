@@ -58,7 +58,7 @@ import 'package:application/model_two/quran_total/آل_عمران3.dart';
 import 'package:application/model_two/quran_total/النساء4.dart';
 import 'package:application/model_two/quran_total/المائدة_5.dart';
 import 'package:application/model_two/quran_total/البقرة2.dart';
-import 'package:application/ui/three.dart';
+import 'package:application/ui/quran_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'quran_total/الأعراف_7.dart';

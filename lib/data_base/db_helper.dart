@@ -3,24 +3,28 @@ import 'package:flutter/material.dart';
 class TodoItem extends StatelessWidget {
 
   String _itemName;
+  String _itemDescription;
   String _dateCreated;
   int _id;
 
-  TodoItem(this._itemName, this._dateCreated);
+  TodoItem(this._itemName, this._dateCreated ,this._itemDescription );
 
   TodoItem.map(dynamic obj){
     this._itemName = obj["itemName"];
+    this._itemDescription = obj["itemDescription"];
     this._dateCreated = obj["dateCreated"];
     this._id = obj["id"];
   }
 
   String get itemName => _itemName;
+  String get itemDescription => _itemDescription;
   String get dateCreated => _dateCreated;
   int get id =>_id;
 
   Map<String,dynamic> toMap(){
     var map = new Map<String,dynamic>();
     map["itemName"] = _itemName;
+    map["itemDescription"] = _itemDescription;
     map["dateCreated"] = _dateCreated;
     if(_id != null){
       map["id"] = _id;
@@ -30,6 +34,7 @@ class TodoItem extends StatelessWidget {
 
   TodoItem.fromMap(Map<String,dynamic> map){
     this._itemName =  map["itemName"];
+    this._itemDescription =  map["itemDescription"] ;
     this._dateCreated =  map["dateCreated"];
     this._id =  map["id"];
   }
@@ -48,12 +53,23 @@ class TodoItem extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black54,
                     fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic ,
                     fontSize: 16.9),
               ),
+              Divider(thickness: 1,) ,
+              Text(
+                _dateCreated,
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic ,
+                    fontSize: 16.9),
+              ),
+              Divider(thickness: 1,) ,
               new Container(
                 margin: const EdgeInsets.only(top: 5.0),
                 child: Text(
-                  "Created on $_dateCreated",
+                  "Created on $itemDescription",
                   style: TextStyle(
                       color: Colors.blueGrey,
                       fontSize: 13.5,
@@ -67,37 +83,4 @@ class TodoItem extends StatelessWidget {
       ),
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

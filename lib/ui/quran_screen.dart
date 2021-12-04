@@ -3,17 +3,16 @@ import 'package:application/model_two/names_two.dart';
 import 'package:application/model_two/quran.dart';
 import 'package:flutter/material.dart';
 
-import 'button_nanigator.dart';
-import 'two.dart';
 
-class Three extends StatefulWidget {
-  const Three({Key key}) : super(key: key);
+
+class QuranScreen extends StatefulWidget {
+  const QuranScreen({Key key}) : super(key: key);
 
   @override
-  _ThreeState createState() => _ThreeState();
+  _QuranScreenState createState() => _QuranScreenState();
 }
 
-class _ThreeState extends State<Three> {
+class _QuranScreenState extends State<QuranScreen> {
   int _currentIndex = 0;
 
   double screenHeight = 0;

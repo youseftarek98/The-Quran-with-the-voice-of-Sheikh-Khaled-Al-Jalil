@@ -3,14 +3,14 @@
 
 import 'package:flutter/material.dart';
 
-class Two extends StatefulWidget {
-  const Two({Key key}) : super(key: key);
+class AzkarScreen extends StatefulWidget {
+  const AzkarScreen({Key key}) : super(key: key);
 
   @override
-  _TwoState createState() => _TwoState();
+  _AzkarScreenState createState() => _AzkarScreenState();
 }
 
-class _TwoState extends State<Two> {
+class _AzkarScreenState extends State<AzkarScreen> {
   int _currentIndex = 0 ;
 
 

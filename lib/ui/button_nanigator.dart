@@ -1,10 +1,10 @@
+import 'package:application/ui/home.dart';
 import 'package:flutter/material.dart';
 
-import '../h.dart';
+
 import 'music_app.dart';
-import 'search.dart';
-import 'three.dart';
-import 'two.dart';
+import 'quran_screen.dart';
+import 'azkar_screen.dart';
 
 class ButtomNavigator extends StatefulWidget {
   const ButtomNavigator({Key key}) : super(key: key);
@@ -25,10 +25,10 @@ class _ButtomNavigatorState extends State<ButtomNavigator> {
   void initState() {
    setState(() {
      _pages =[
-       { "page" : Episode6PlaylistView()},
-       { "page" : Home()}, //Search()
-       { "page" : Two()},
-       { "page" : Three()},
+       { "page" : MusicScreen()},
+       { "page" : HomeScreen()}, //Search()
+       { "page" : AzkarScreen()},
+       { "page" : QuranScreen()},
 
      ] ;
    });

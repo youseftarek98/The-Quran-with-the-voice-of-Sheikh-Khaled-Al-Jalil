@@ -3,13 +3,13 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class Episode6PlaylistView extends StatefulWidget {
+class MusicScreen extends StatefulWidget {
   @override
-  _Episode6PlaylistViewState createState() =>
-      _Episode6PlaylistViewState();
+  _MusicScreenState createState() =>
+      _MusicScreenState();
 }
 
-class _Episode6PlaylistViewState extends State<Episode6PlaylistView> {
+class _MusicScreenState extends State<MusicScreen> {
   final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
   double screenHeight = 0;
   double screenWidth = 0;
@@ -685,10 +685,12 @@ class _Episode6PlaylistViewState extends State<Episode6PlaylistView> {
 
   Widget playlist(RealtimePlayingInfos realtimePlayingInfos) {
     return Container(
-      height: screenHeight * 0.35,
+      height: screenHeight * 0.45,
+      //width: screenWidth * 0.20,
       alignment: Alignment.bottomLeft,
       child: ListView.builder(
           shrinkWrap: true,
+
           itemCount: audioList.length,
           itemBuilder: (context, index) {
             return playlistItem(index);
@@ -1104,6 +1106,7 @@ class _Episode6PlaylistViewState extends State<Episode6PlaylistView> {
     screenWidth = MediaQuery.of(context).size.width;
 
     return  Scaffold(
+
       backgroundColor: mainColor,
       body:
           audioPlayer.builderRealtimePlayingInfos(
@@ -1115,14 +1118,21 @@ class _Episode6PlaylistViewState extends State<Episode6PlaylistView> {
                       // width: double.infinity,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           playlistImage(realtimePlayingInfos),
-                          //  SizedBox(height: screenHeight * 0.02),
-                          playlistTitle(),
+                        Stack(
+                          children: [
+
+                            //  SizedBox(height: screenHeight * 0.02),
+                            playlistTitle(),
+                          ],
+                        ),
                           // SizedBox(height: screenHeight * 0.02),
                           // playButton(),
-                          SizedBox(height: screenHeight * 0.02),
+
                           playlist(realtimePlayingInfos),
+                          //SizedBox(height: screenHeight * 0.08),
                           Align(
                             alignment: Alignment.bottomCenter,
                             child: bottomPlayContainer(realtimePlayingInfos),
