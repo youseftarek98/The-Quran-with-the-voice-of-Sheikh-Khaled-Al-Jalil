@@ -35,7 +35,9 @@ class _TodoScreenState extends State<TodoScreen> {
       body: Column(
         children: <Widget>[
           Flexible(
-            child: ListView.builder(
+            child:
+
+            ListView.builder(
                 itemCount: _itemsList.length,
                 itemBuilder: (_, int index) {
                   return Container(
@@ -58,6 +60,7 @@ class _TodoScreenState extends State<TodoScreen> {
                     ),
                   );
                 }),
+
           ),
           Divider(
             height: 1.0,

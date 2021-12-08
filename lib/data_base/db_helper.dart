@@ -45,39 +45,41 @@ class TodoItem extends StatelessWidget {
       margin: const EdgeInsets.all(8.0),
       child: new Row(
         children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                _itemName,
-                style: TextStyle(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic ,
-                    fontSize: 16.9),
-              ),
-              Divider(thickness: 1,) ,
-              Text(
-                _dateCreated,
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic ,
-                    fontSize: 16.9),
-              ),
-              Divider(thickness: 1,) ,
-              new Container(
-                margin: const EdgeInsets.only(top: 5.0),
-                child: Text(
-                  "Created on $itemDescription",
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  _itemName,
                   style: TextStyle(
-                      color: Colors.blueGrey,
-                      fontSize: 13.5,
-                      fontStyle: FontStyle.italic
-                  ),
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic ,
+                      fontSize: 16.9),
                 ),
-              )
-            ],
+                Divider(thickness: 1,) ,
+                Text(
+                  _dateCreated,
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic ,
+                      fontSize: 16.9),
+                ),
+                Divider(thickness: 1,) ,
+                new Container(
+                  margin: const EdgeInsets.only(top: 5.0),
+                  child: Text(
+                    "Created on $itemDescription",
+                    style: TextStyle(
+                        color: Colors.blueGrey,
+                        fontSize: 13.5,
+                        fontStyle: FontStyle.italic
+                    ),
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
